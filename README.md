@@ -38,15 +38,15 @@ python3 main.py
 ```
 ## Steps executed:
 
-### 1. Fetch new posts (Twitter + YouTube)
+-  Fetch new posts (Twitter + YouTube)
 
-### 2. Save raw JSON → data/raw/
+-  Save raw JSON → data/raw/
 
-### 3. Normalize to unified schema → Parquet in data/unified/
+-  Normalize to unified schema → Parquet in data/unified/
 
-### 4. Daily metrics + 7-day MA → CSV in data/outputs/
+-  Daily metrics + 7-day MA → CSV in data/outputs/
 
-### 5. Top posts (overall + per platform) → CSV in data/outputs/
+-  Top posts (overall + per platform) → CSV in data/outputs/
 
 ## Automating with Cron (WSL/Linux)
 ### 1. Edit crontab:
