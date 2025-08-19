@@ -44,9 +44,9 @@ python3 main.py
 
 ### 3. Normalize to unified schema → Parquet in data/unified/
 
-### 4. Daily metrics + 7-day MA → CSV + SQLite in data/outputs/
+### 4. Daily metrics + 7-day MA → CSV in data/outputs/
 
-### 5. Top posts (overall + per platform) → CSV 
+### 5. Top posts (overall + per platform) → CSV in data/outputs/
 
 ## Automating with Cron (WSL/Linux)
 ### 1. Edit crontab:
