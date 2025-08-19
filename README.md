@@ -63,8 +63,8 @@ crontab -l
 ```
 ## Next Steps
 
-### Extend pipeline with Airflow DAG instead of cron
+- Extend pipeline with Airflow DAG instead of cron
 
-### Add dashboard using Streamlit or Superset
+- Add dashboard using Streamlit or Superset
 
-### Support more platforms (Facebook, Instagram, TikTok)
+- Support more platforms (Facebook, Instagram, TikTok)
