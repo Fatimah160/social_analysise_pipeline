@@ -7,7 +7,7 @@ It:
 - Normalizes raw JSON into a unified schema
 - Computes **daily engagement metrics** and **7-day moving average**
 - Extracts **Top posts** (overall + per platform)
-- Stores results in **CSV** and **SQLite database**
+- Stores results in **CSV** 
 
 ---
 
