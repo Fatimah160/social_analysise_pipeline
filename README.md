@@ -1,7 +1,7 @@
 # 📊 Social Media Analytics Pipeline
 
 ## 🚀 Overview
-This project is a small **ETL pipeline** for social media analytics using Python.  
+This project is an ETL pipeline for social media analytics using Python and Apache Airflow.
 It:
 - Fetches new posts daily from **Twitter** and **YouTube** (can be extended to Facebook, etc.)
 - Normalizes raw JSON into a unified schema
@@ -33,9 +33,29 @@ TWITTER_BEARER_TOKEN=your_twitter_api_key
 YOUTUBE_API_KEY=your_youtube_api_key
 ```
 ### 5. Run pipeline 
+##Option A: Run manually (debugging)
 ```
 python3 main.py
 ```
+##Option B: Run with Airflow (recommended ✅)
+- Initialize Airflow (first time only):
+```
+airflow db init
+```
+
+- Start Airflow services:
+```
+airflow webserver --port 8080
+airflow scheduler
+```
+
+- Place DAG file inside:
+```
+airflow/dags/social_media_pipeline.py
+```
+##Airflow Graph
+<img width="1332" height="471" alt="brave_RufBT1EPbH" src="https://github.com/user-attachments/assets/cbb6ce6d-ed0b-4b6c-9ef5-9d9de0136fdb" />
+
 ## Steps executed:
 
 -  Fetch new posts (Twitter + YouTube)
@@ -48,22 +68,7 @@ python3 main.py
 
 -  Top posts (overall + per platform) → CSV in data/outputs/
 
-## Automating with Cron (WSL/Linux)
-### 1. Edit crontab:
-```
-crontab -e
-```
-### 2. Add job to run every day at 01:00 AM:
-```
-0 1 * * * cd /home/username/social_analytics_pipeline && /usr/bin/python3 main.py >> cron_log.txt 2>&1
-```
-### 3. Verify:
-```
-crontab -l
-```
 ## Next Steps
-
-- Extend pipeline with Airflow DAG instead of cron
 
 - Add dashboard using Streamlit or Superset
 
